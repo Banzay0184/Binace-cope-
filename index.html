@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit and Loss Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="pnl-layout">
+    <div class="pnl-header">
+        <div class="back-btn">
+            <a href="#">
+                <span class="back-btn-icon">
+                    <svg class="back-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path
+                            fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.934 12l3.89 3.89-1.769 1.767L8.398 12l1.768-1.768 3.89-3.889 1.767 1.768-3.889 3.89z"
+                            fill="currentColor"></path></svg>
+                    <p>Назад</p>
+                </span>
+            </a>
+        </div>
+        <div class="pnl-header-title">
+            <div class="header-title">
+                Данные о прибылях и убытках на фьючерсном счете
+                <div class="switch-balance-button">
+                    <svg class="switch-svg" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 14.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M6.555 6.31L1 12l5.555 5.69a7.572 7.572 0 0010.89 0L23 12l-5.555-5.69a7.572 7.572 0 00-10.89 0zM17 12a5 5 0 11-10 0 5 5 0 0110 0z"
+                              fill="currentColor"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="header-shared">
+                <button class="header-shared-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="cedi1d">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M16.5 10a3.5 3.5 0 10-3.476-3.09L8.62 9.216a3.5 3.5 0 100 5.568l4.403 2.306a3.5 3.5 0 101.16-2.214L9.94 12.652a3.52 3.52 0 000-1.304l4.245-2.224A3.487 3.487 0 0016.5 10z"
+                              fill="currentColor"></path>
+                    </svg>
+                    Поделиться PnL
+                </button>
+            </div>
+        </div>
+        <div class="pnl-tabs-btn">
+            <div class="bn-tab-list bn-tab-list__default">
+                <div class="bn-tab bn-tab__default active"
+                >
+                    USDⓈ-M
+                </div>
+                <div class="bn-tab bn-tab__default"
+                >
+                    COIN-M
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pnl-content">
+        <div class="pnl-content-body">
+            <div class="pnl-content-body-item">
+                <div class="text-TextPrimary">PNL за сегодня</div>
+                <div class="pnl-content-body-item-value">
+                    <div class="text-Primary">0.00%</div>
+                    <div class="text-PrimaryText typography-body1-1 lg:typography-body5">0.00 USD</div>
+                </div>
+            </div>
+            <div class="pnl-content-body-item">
+                <div class="text-TextPrimary">PnL за 7 дн.</div>
+                <div class="pnl-content-body-item-value">
+                    <div class="text-Primary">0.00%</div>
+                    <div class="text-PrimaryText typography-body1-1 lg:typography-body5">0.00 USD</div>
+                </div>
+            </div>
+            <div class="pnl-content-body-item">
+                <div class="text-TextPrimary">PnL за 30 дн.</div>
+                <div class="pnl-content-body-item-value">
+                    <div class="text-Primary">0.00%</div>
+                    <div class="text-PrimaryText typography-body1-1 lg:typography-body5">0.00 USD</div>
+                </div>
+            </div>
+            <div class="pnl-content-body-item">
+                <div class="text-TextPrimary dashed">PnL за все время</div>
+                <div class="pnl-content-body-item-value">
+                    <div class="text-Primary">0.00%</div>
+                    <div class="text-PrimaryText typography-body1-1 lg:typography-body5">0.00 USD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pnl-info">
+        <div class="pnl-info-analytics">
+            <h1 class="info-analytics-title">Анализ прибыли и убытка</h1>
+            <div class="info-analytics-content">
+                <div class="info-analytics-content-items">
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                </div>
+                <div class="info-analytics-content-items">
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                    <div class="info-analytics-content-item">
+                        <div class="">
+                            <div class="bn-tooltips-ele tooltip">
+                                <span class="tooltiptext">Tooltip text</span>
+                                <p>Общая прибыль</p>
+                            </div>
+                        </div>
+                        <p class="text-PrimaryText">0.00 USD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-analytics-details">
+                <div class="pnl-tabs-btn">
+                    <div class="bn-tab-list bn-tab-list__default">
+                        <div class="bn-tab bn-tab__default active"
+                        >
+                            Обзор
+                        </div>
+                        <div class="bn-tab bn-tab__default"
+                        >
+                            Детали
+                        </div>
+                    </div>
+                </div>
+                <div class="bn-tab-pane-list">
+                    <div class="bn-tab-pane active">
+                        <div class="bn-tab-pane-header">
+                            <div class="bn-tab-pane-header-title">
+                                <p class="text-PrimaryText-title">
+                                    PNL по дням
+                                </p>
+                                <div class="bn-tooltips-wrap">
+                                    <div class="bn-tooltips-ele">
+                                        <div class="bn-select-field">
+                                            <div class="bn-select-field-input"></div>
+                                            <svg fill="textThird" class="bn-svg bn-select-field-arrow"
+                                                 viewBox="0 0 24 24"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.5 8.49v2.25L12 15.51l-4.5-4.77V8.49h9z"
+                                                      fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="bn-bubble bn-bubble__unset shadow data-font-14 bn-tooltips bn-select-bubble">
+                                            <div class="bn-bubble-content">
+                                                <div class="bn-select-overlay">
+                                                    <div class="bn-select-overlay-options">
+                                                        <div class="bn-select-overlay-empty">No results found</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="bn-switch bn-switch__content bn-switch__content__line data-size-middle checked">
+                                <div class="bn-switch__content-left">
+                                    <svg onclick="toggleContent('chart')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="bn-svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M9.5 4h5v15h-5V4zM3 11h4.5v8H3v-8zm18-2h-4.5v10H21V9z"
+                                              fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="bn-switch__content-right">
+                                    <svg onclick="toggleContent('calendar')" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="bn-svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M10 4H7v2H4v3.5h16V6h-3V4h-3v2h-4V4zm10 8H4v7h16v-7z"
+                                              fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="bn-switch-dot"></div>
+                            </div>
+                        </div>
+
+                        <div id="calendar-content" class="content">
+                            <div class="calendar">
+                                <div class="grid grid-cols-7 gap-[5px] md:gap-[10px]">
+                                    <div class="flex flex-col items-center justify-center typography-caption2 text-SecondaryText md:text-TertiaryText">
+                                        S
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center typography-caption2 text-SecondaryText md:text-TertiaryText">
+                                        M
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center typography-caption2 text-SecondaryText md:text-TertiaryText">
+                                        T
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center typography-caption2 text-SecondaryText md:text-TertiaryText">
+                                        W
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center typography-caption2 text-SecondaryText md:text-TertiaryText">
+                                        T
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center typography-caption2 text-SecondaryText md:text-TertiaryText">
+                                        F
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center typography-caption2 text-SecondaryText md:text-TertiaryText">
+                                        S
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px]"></div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        1
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        2
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        3
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        4
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        5
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        6
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        7
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        8
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        9
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        10
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        11
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        12
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        13
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        14
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        15
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        16
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        17
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        18
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        19
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        20
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        21
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        22
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        23
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        24
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        25
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        26
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        27
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        28
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        29
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        30
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center h-[45px] md:h-[54px] rounded-[6px] text-PrimaryText typography-body4 md:typography-subtitle2">
+                                        31
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="chart-content" class="content">
+                            <div class="chart-container">
+                                <canvas id="pnlChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
